@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>task-3</title>
+</head>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner-box">
+            <div class="left-side">
+                <div class="left-header">
+                    <h1>Mortgage Calculator</h1>
+                    <p class="clear-all-text">Clear All</p>
+                </div>
+                <form  class="form">
+                    <div class="input-group">
+                        <label for="amount" class="form-label" >Mortgage Amount</label>
+                        <span for="basic" class="input-group-text" id="basic">£</span>
+                        <input type="text" name="amount" id="amount" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Total Morgate Amount That you need to repayment.</div>
+                    </div>
+                    <div class="input-group">
+                        <div class="half-input-container">
+                            <div class="half-input">
+                                <label for="term" class="term" >Mortgage Term</label>
+                                <span for="year" class="input-group-text1" id="year">Year</span>
+                                <input type="text" name="term" id="term">
+                                <div id="emailHelp" class="form-text">Total Morgate Term.</div>
+                            </div>
+                            <div class="half-input">
+                                <label for="interest-rate" class="interest-rate">Interest Rate</label>
+                                <span for="basic2" class="input-group-text2" id="basic2">%</span>
+                                <input type="text" name="rate" id="rate">
+                                <div id="emailHelp" class="form-text">Total Morgate Rate.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group radio-group">
+                        <label for="Mortgage Type">Mortgage Type</label>
+                        <div class="radio-option">
+                            <input class="form-check-input" type="radio" id="Mortgage-type1" name="morgate-type" value="option1" checked>
+                            <label class="form-check-label" for="fixed-rate">Fixed Rate</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="Mortgage-type2" name="Mortgage-type" value="option2">
+                            <label for="variable-rate">Variable Rate</label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Calculate Repayments</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right-side">
+                <div class="cotainer">
+                    <h1 class="input-text-result">Your results</h1>
+                    <p class="input-text-paragraph">Your results are shown below based on the information you prowided.
+                        To adjust the results, edit the form and click "calculate repayment" again.</p>
+                </div>
+                <div class="container-box">
+                     <p class="input-text-repayment">Your monthly repayments</p>
+                    <h1 class="input-text-amount" id="total-installment">£1,797.74</h1>
+
+                    <p class="input-text-term">Total you'll repay over the term</p>
+                    <h2 class="input-text-amount2" id="total">£539,322.94</h2> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
