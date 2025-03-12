@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>task-03</title>
+</head>
+<body>
+    <div class="container">
+		<div class="inner-box">
+			<div class="left-side">
+				<div class="left-header">
+					<h1>Mortgage Calculator</h1>
+					<p class="clear-all-text">Clear All</p>
+				</div>
+				<form action="#">
+					<div class="input-group">
+						<label for="mortgage-amount">Mortgage Amount</label>
+						<span class="input-group-text" id="basic-addon1">£</span>
+						<input type="text" id="mortgage-amount" name="mortgage-amount" value="300">
+					</div>
+					<div class="input-group">
+						<div class="half-input-container">
+							<div class="half-input">
+								<label for="mortgage-term">Mortgage Term</label>
+								<span class="input-group-text1" id="basic-addon1">form</span>
+								<input type="text" id="mortgage-term" name="mortgage-term">
+							</div>
+							<div class="half-input">
+								<label for="interest-rate">Interest Rate</label>
+								<span class="input-group-text2" id="basic-addon1">%</span>
+								<input type="text" id="interest-rate" name="interest-rate">
+							</div>
+						</div>
+					</div>
+					<div class="input-group radio-group">
+						<label>Mortgage Type</label>
+						<div class="radio-option">
+							<input type="radio" id="fixed-rate" name="mortgage-type" value="fixed" checked>
+							<label for="fixed-rate">Fixed Rate</label>
+						</div>
+						<div class="radio-option">
+							<input type="radio" id="variable-rate" name="mortgage-type" value="variable">
+							<label for="variable-rate">Variable Rate</label>
+						</div>
+					</div>
+					<button type="submit">Calculate Repayments</button>
+				</form>
+			</div>
+			<div class="right-side">
+				<img src="https://i.ibb.co/5v1VwGy/Schermata-2024-07-11-alle-21-36-43.png" alt="Calculator" class="calculator-img">
+				<p>Results shown here</p>
+				<p class="small-text">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+			</div>
+		</div>
+	</div>
+    
+</body>
+</html>

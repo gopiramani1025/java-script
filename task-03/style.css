@@ -1,0 +1,324 @@
+:root {
+	--card-border-radius: 1.5em;
+	--yellow-color: #d9dc30;
+	--blue-color: #143142;
+	--light-blue-color: #e3f4fd;
+	--light-gray-color: #ccc;
+	--gray-color: #6b8793;
+	--light-gray-text-color: #8caabd;
+}
+
+body {
+	background-color: var(--light-blue-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.container {
+	width: 90%;
+	max-width: 720px;
+	height: 440px;
+	min-height: 380px;
+	background-color: white;
+	border-radius: var(--card-border-radius);
+	display: flex;
+	overflow: hidden;
+	box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+}
+
+.inner-box {
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.left-side,
+.right-side {
+	width: 50%;
+	height: 100%;
+	padding: 30px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.left-side {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.left-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.left-header h1 {
+	color: var(--blue-color);
+	margin: 0;
+	font-size: 18px;
+}
+
+.clear-all-text {
+	color: var(--light-gray-text-color);
+	font-size: 0.8em;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.input-group {
+	margin-bottom: 15px;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+}
+
+.input-group-text {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	padding: 0.4rem 0.75rem;
+	text-align: center;
+	white-space: nowrap;
+	top: 1.3em;
+	bottom: 0;
+	background: var(--light-blue-color);
+	overflow: hidden;
+	border-radius: 6px 0 0 6px;
+}
+
+.input-group-text1{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	margin-left: 88px;
+	padding: 0.4rem 0.75rem;
+	text-align: center;
+	top: 1.3em;
+	bottom: 0;
+	background: var(--light-blue-color);
+	border-radius: 6px 0 0 6px;
+}
+
+.input-group-text2{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	margin-left: 107px;
+	padding: 0.4rem 0.75rem;
+	text-align: center;
+	top: 1.3em;
+	bottom: 0;
+	background: var(--light-blue-color);
+	border-radius: 6px 0 0 6px;
+}
+
+
+.input-group label {
+	display: block;
+	font-size: 0.9rem;
+	color: var(--gray-color);
+	margin-bottom: 0.3em;
+	line-height: 1.2em;
+}
+
+.input-group input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-size: 0.9rem;
+	border: 1px solid var(--light-gray-color);
+}
+
+#mortgage-amount {
+	border: 1px solid var(--yellow-color);
+	padding-left: 40px;
+}
+
+.half-input-container {
+	display: flex;
+	width: 100%;
+}
+
+.half-input {
+	width: 50%;
+	margin-right: 10px;
+}
+
+.half-input:last-child {
+	margin-right: 0;
+}
+
+.half-input input {
+	border: 1px solid var(--blue-color);
+}
+
+.input-group.radio-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.input-group.radio-group label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.input-group.radio-group div label {
+	margin-bottom: 0;
+}
+
+.input-group.radio-group div {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border: 1px solid var(--light-gray-color);
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.input-group.radio-group div:has(input[type="radio"]:checked) {
+	border: 1px solid var(--yellow-color);
+	background: #fafae1;
+}
+
+.input-group.radio-group input[type="radio"] {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	appearance: none;
+	border: 1px solid var(--blue-color);
+	border-radius: 50%;
+	outline: none;
+	background-color: #fff;
+}
+
+.input-group.radio-group input[type="radio"]:checked {
+	border: 2px solid var(--yellow-color);
+}
+
+.input-group.radio-group input[type="radio"]:checked::before {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+.input-group.radio-group input[type="radio"]:checked::after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: var(--yellow-color);
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+
+button {
+	background-color: var(--yellow-color);
+	color: var(--blue-color);
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 0.9em;
+	border-radius: 20px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.right-side {
+	background-color: var(--blue-color);
+	border-bottom-left-radius: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+.right-side p {
+	margin: 5px 0;
+}
+
+.right-side .small-text {
+	font-size: 0.8em;
+	color: var(--light-gray-text-color);
+}
+
+.calculator-img {
+	max-width: 150px;
+}
+
+@media (max-width: 768px) {
+	body {
+		height: auto;
+		flex-direction: column;
+		margin: 20px 0;
+	}
+	.container {
+		height: auto;
+		flex-direction: column;
+	}
+	.inner-box {
+		flex-direction: column;
+	}
+	.left-side,
+	.right-side {
+		width: 100%;
+		height: auto;
+		padding: 20px;
+	}
+	.right-side {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 60px;
+	}
+	.input-group-text {
+		height: 1.4em;
+	}
+}
+
+@media (max-width: 480px) {
+	.left-header h1 {
+		font-size: 1.1em;
+	}
+	.clear-all-text {
+		font-size: 0.7em;
+	}
+	.calculator-img {
+		max-width: 80px;
+	}
+	.input-group input[type="text"],
+	.input-group input[type="radio"] {
+		font-size: 0.9em;
+	}
+	button {
+		padding: 8px 16px;
+		font-size: 0.9em;
+	}
+}
