@@ -1,6 +1,7 @@
 var form = document.querySelector('form');
 var totalInstallment = document.querySelector('#total-installment');
 var total = document.querySelector('#total');
+var totalInterest= document.querySelector('#total-interest');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -34,7 +35,8 @@ console.log("EMI:", emi); // Debugging the EMI calculation
 
 // Update the UI
 totalInstallment.innerHTML =  `£${emi}`;
-total.innerHTML = `£${emi*60}`;
+total.innerHTML = `£${emi * term * 12}`;
+totalInterest.innerHTML = `£${emi * term * 12 - amount}`;
 });
 
 function calculateMonthlyEMI(amount, term, rate) {
@@ -57,4 +59,25 @@ function clculateAmount() {
     }
 
 }
+
+function calculateMortgage() {
+    // Get values from the form
+    const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+    const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12; // Monthly rate
+    const loanTerm = parseInt(document.getElementById('loanTerm').value) * 12; // Months
+
+    // Check if inputs are valid
+    if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm) || loanAmount <= 0 || interestRate <= 0 || loanTerm <= 0) {
+        alert("Please enter valid values.");
+        return;
+    }
+
+    // Calculate monthly payment using the mortgage formula
+    const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
+
+    // Display the result
+    document.getElementById('monthlyPayment').innerText = monthlyPayment.toFixed(2);
+}
+
+  
 
